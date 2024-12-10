@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar Tarea</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Detalles de la Tarea</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Titulo</ion-label>
+        <ion-input [(ngModel)]="tarea.titulo" placeholder="Ingrese el título"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Descripcion</ion-label>
+        <ion-textarea [(ngModel)]="tarea.descripcion" placeholder="Ingrese la descripción"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tipo</ion-label>
+        <ion-select [(ngModel)]="tarea.tipo" placeholder="Seleccione un tipo">
+          <ion-select-option value="Trabajo">Trabajo</ion-select-option>
+          <ion-select-option value="Casa">Casa</ion-select-option>
+          <ion-select-option value="Negocios">Negocios</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button expand="full" color="primary" (click)="agregarTarea()">Agregar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
